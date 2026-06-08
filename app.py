@@ -10,6 +10,7 @@ import secrets
 import smtplib
 import sqlite3
 import sys
+import os
 from datetime import datetime
 from email.mime.text import MIMEText
 
@@ -17,8 +18,8 @@ from email.mime.text import MIMEText
 APP_DIR   = Path(__file__).resolve().parent
 STATIC_DIR = APP_DIR / "static"
 DB_PATH   = APP_DIR / "ecosort.db"
-HOST      = "127.0.0.1"
-PORT      = 8890
+HOST      = "0.0.0.0"
+PORT      = int(os.environ.get("PORT", 8890))
 PAGE_SIZE = 10
 
 SMTP_HOST = ""
