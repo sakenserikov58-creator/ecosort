@@ -17,7 +17,7 @@ from email.mime.text import MIMEText
 
 APP_DIR   = Path(__file__).resolve().parent
 STATIC_DIR = APP_DIR / "static"
-DB_PATH   = APP_DIR / "ecosort.db"
+DB_PATH   = APP_DIR / "ecolife.db"
 HOST      = "0.0.0.0"
 PORT      = int(os.environ.get("PORT", 8890))
 PAGE_SIZE = 10
@@ -66,26 +66,26 @@ T = {
         'step1_title':'Тіркелу','step1_text':'Қатысушы аккаунт жасайды және жеке кабинет алады.',
         'step2_title':'Акцияны таңдау','step2_text':'Шаралар бетін ашып, қолайлы іс-шараны таңдайды.',
         'step3_title':'Өтінім','step3_text':'«Қатысу» батырмасын басады — өтінім тарихында пайда болады.',
-        'step4_title':'Команда жауабы','step4_text':'EcoSort командасы өтінімдерді қарап, пайдаланушыларға көмектеседі.',
-        'quicklinks_eyebrow':'Жылдам бөлімдер','quicklinks_title':'EcoSort негізгі мүмкіндіктері',
+        'step4_title':'Команда жауабы','step4_text':'EcoLife командасы өтінімдерді қарап, пайдаланушыларға көмектеседі.',
+        'quicklinks_eyebrow':'Жылдам бөлімдер','quicklinks_title':'EcoLife негізгі мүмкіндіктері',
         'feature1_title':'Жұмыс картасы','feature1_sub':'OpenStreetMap-тегі қабылдау нүктелері',
         'feature2_title':'Акциялар','feature2_sub':'Шаралар және пайдаланушыларды жазу',
         'feature3_title':'Карталар','feature3_sub':'Пайдалы экологиялық материалдар',
         'feature4_title':'Сұраулар','feature4_sub':'Өтініштер және қолдау жауаптары',
         'upcoming_eyebrow':'Жақындағы шаралар','upcoming_title':'Жақындағы экологиялық шаралар',
         'cards_eyebrow':'Пайдалы карталар','cards_title':'Пайдалы экологиялық материалдар',
-        'impact_eyebrow':'Нәтижелер мен серіктестік','impact_title':'EcoSort — қоғамдық экологиялық платформа',
+        'impact_eyebrow':'Нәтижелер мен серіктестік','impact_title':'EcoLife — қоғамдық экологиялық платформа',
         'impact1':'қалдық қайта өңдеуге жіберілді','impact2':'серіктес нүктелер мен ұйымдар',
         'impact3':'экологиялық энциклопедия санаттары','impact4':'өтініш нысаны мен кері байланыс',
         'photo_eyebrow':'Фотогалерея','photo_title':'Бірге тазалық сақтаймыз',
         'photo1_title':'Таза жағалау',
-        'photo1_text':'Волонтерлар жыл сайын мыңдаған килограмм қоқысты жинайды. EcoSort субботниктері арқылы жағалаулар, саябақтар және тұрғын аудандар тазарады. Әр қатысушы табиғатты қорғауға нақты үлес қосады.',
+        'photo1_text':'Волонтерлар жыл сайын мыңдаған килограмм қоқысты жинайды. EcoLife субботниктері арқылы жағалаулар, саябақтар және тұрғын аудандар тазарады. Әр қатысушы табиғатты қорғауға нақты үлес қосады.',
         'photo2_title':'Ағаш отырғызу',
-        'photo2_text':'Жасыл қалалар болашақ ұрпаққа берілетін мұра. EcoSort акциялары аясында мектептер мен тұрғын үйлер маңына жүздеген саженец отырғызылады. Бір ағаш — бір жылда 22 кг СО₂ сіңіреді.',
+        'photo2_text':'Жасыл қалалар болашақ ұрпаққа берілетін мұра. EcoLife акциялары аясында мектептер мен тұрғын үйлер маңына жүздеген саженец отырғызылады. Бір ағаш — бір жылда 22 кг СО₂ сіңіреді.',
         'photo3_title':'Қайта өңдеу',
-        'photo3_text':'Дұрыс сортталған қалдық ресурсқа айналады. Пластик, қағаз, шыны және металл — бөлек жиналса, 70%-ға дейін қайта пайдалануға жіберіледі. EcoSort картасы арқылы жақын қабылдау нүктесін табыңыз.',
+        'photo3_text':'Дұрыс сортталған қалдық ресурсқа айналады. Пластик, қағаз, шыны және металл — бөлек жиналса, 70%-ға дейін қайта пайдалануға жіберіледі. EcoLife картасы арқылы жақын қабылдау нүктесін табыңыз.',
         'photo4_title':'Экологиялық білім',
-        'photo4_text':'Мектептер мен отбасылар бірге сауатты болады. EcoSort тесттері мен энциклопедиясы арқылы балалар мен ересектер қалдықтарды дұрыс сортталуды үйренеді. Білім — экологиялық өзгерістің негізі.',
+        'photo4_text':'Мектептер мен отбасылар бірге сауатты болады. EcoLife тесттері мен энциклопедиясы арқылы балалар мен ересектер қалдықтарды дұрыс сортталуды үйренеді. Білім — экологиялық өзгерістің негізі.',
         # Акции
         'events_eyebrow':'Акциялар мен шаралар','events_title':'Жақындағы экологиялық шаралар',
         'events_subtitle':'Қызықты акцияны таңдап, қатысуға өтінім жіберіңіз.',
@@ -158,12 +158,12 @@ T = {
         'deleted_event':'Акция жойылды.','deleted_card':'Карта жойылды.',
         'fill_all':'Барлық өрістерді толтырыңыз.',
         'admin_only_title':'Тек әкімшіге қол жетімді',
-        'admin_only_text':'admin@ecosort.kz / admin123 ретінде кіріңіз.',
+        'admin_only_text':'admin@ecolife.kz / admin123 ретінде кіріңіз.',
         'admin_users':'Пайдаланушылар','col_reg_date':'Тіркелу күні',
         'col_joins':'Қатысу','col_status_user':'Мәртебе',
         'user_active':'Белсенді','user_banned':'Бұғатталған',
         'btn_ban':'Бұғаттау','btn_unban':'Бұғатты алу','btn_reset_acc':'Тарихты тазалау',
-        'banned_notice':'Аккаунтыңыз бұғатталған. Подробнее: hello@ecosort.kz',
+        'banned_notice':'Аккаунтыңыз бұғатталған. Подробнее: hello@ecolife.kz',
         'no_users':'Пайдаланушылар жоқ.',
         'search_users':'Пайдаланушылар бойынша іздеу...',
         # Сброс пароля
@@ -172,7 +172,7 @@ T = {
         'forgot_send':'Сілтеме жіберу',
         'reset_eyebrow':'Жаңа құпия сөз','reset_title':'Жаңа құпия сөз ойлап табыңыз',
         'reset_new':'Жаңа құпия сөз','reset_confirm':'Қайталаңыз','reset_save':'Сақтау',
-        'footer_about':'EcoSort — қалдықтарды қабылдау нүктелерін табуға, акцияларға қатысуға және экологиялық мәдениетті дамытуға арналған платформа.',
+        'footer_about':'EcoLife — қалдықтарды қабылдау нүктелерін табуға, акцияларға қатысуға және экологиялық мәдениетті дамытуға арналған платформа.',
         'footer_write':'Бізге жазыңыз','footer_address':'Мекенжайымыз','footer_hours':'Жұмыс уақыты',
         'search':'Іздеу','page_of':'бет',
     },
@@ -196,26 +196,26 @@ T = {
         'step1_title':'Регистрация','step1_text':'Участник создает аккаунт и получает личный кабинет.',
         'step2_title':'Выбор акции','step2_text':'Открывает страницу мероприятий и выбирает событие.',
         'step3_title':'Заявка','step3_text':'Нажимает «Принять участие», заявка появляется в истории.',
-        'step4_title':'Ответ команды','step4_text':'Команда EcoSort видит заявки и помогает пользователям.',
-        'quicklinks_eyebrow':'Быстрые разделы','quicklinks_title':'Основные возможности EcoSort',
+        'step4_title':'Ответ команды','step4_text':'Команда EcoLife видит заявки и помогает пользователям.',
+        'quicklinks_eyebrow':'Быстрые разделы','quicklinks_title':'Основные возможности EcoLife',
         'feature1_title':'Рабочая карта','feature1_sub':'Пункты приема на OpenStreetMap',
         'feature2_title':'Акции','feature2_sub':'Мероприятия и запись пользователей',
         'feature3_title':'Карточки','feature3_sub':'Полезные экологические материалы',
         'feature4_title':'Запросы','feature4_sub':'Обращения и ответы поддержки',
         'upcoming_eyebrow':'Ближайшие мероприятия','upcoming_title':'Ближайшие экологические мероприятия',
         'cards_eyebrow':'Полезные карточки','cards_title':'Полезные экологические материалы',
-        'impact_eyebrow':'Результаты и партнёрство','impact_title':'EcoSort — общественная экологическая платформа',
+        'impact_eyebrow':'Результаты и партнёрство','impact_title':'EcoLife — общественная экологическая платформа',
         'impact1':'отходов отправлено на переработку','impact2':'партнёрских пункта и организации',
         'impact3':'категорий экологической энциклопедии','impact4':'форма запросов и обратной связи',
         'photo_eyebrow':'Фотогалерея','photo_title':'Вместе сохраняем чистоту',
         'photo1_title':'Чистый берег',
-        'photo1_text':'Волонтёры EcoSort ежегодно собирают тысячи килограммов мусора на берегах и в парках. Каждый субботник — это реальный вклад в чистоту природы. Присоединяйтесь к ближайшей акции и сделайте мир чище.',
+        'photo1_text':'Волонтёры EcoLife ежегодно собирают тысячи килограммов мусора на берегах и в парках. Каждый субботник — это реальный вклад в чистоту природы. Присоединяйтесь к ближайшей акции и сделайте мир чище.',
         'photo2_title':'Посадка деревьев',
-        'photo2_text':'Зелёные города — наследие для будущих поколений. В рамках акций EcoSort высаживаются сотни саженцев у школ и жилых домов. Одно дерево поглощает до 22 кг СО₂ в год и служит десятилетиями.',
+        'photo2_text':'Зелёные города — наследие для будущих поколений. В рамках акций EcoLife высаживаются сотни саженцев у школ и жилых домов. Одно дерево поглощает до 22 кг СО₂ в год и служит десятилетиями.',
         'photo3_title':'Переработка',
-        'photo3_text':'Правильно отсортированный мусор становится ресурсом, а не загрязнением. Пластик, бумага, стекло и металл при раздельном сборе перерабатываются на 70%. Найдите ближайший пункт приёма на карте EcoSort.',
+        'photo3_text':'Правильно отсортированный мусор становится ресурсом, а не загрязнением. Пластик, бумага, стекло и металл при раздельном сборе перерабатываются на 70%. Найдите ближайший пункт приёма на карте EcoLife.',
         'photo4_title':'Экологическое образование',
-        'photo4_text':'Школы и семьи вместе учатся быть экологически ответственными. Тесты и энциклопедия EcoSort помогают детям и взрослым понять, как сортировать отходы и беречь природу. Знания — основа реальных изменений.',
+        'photo4_text':'Школы и семьи вместе учатся быть экологически ответственными. Тесты и энциклопедия EcoLife помогают детям и взрослым понять, как сортировать отходы и беречь природу. Знания — основа реальных изменений.',
         'events_eyebrow':'Акции и мероприятия','events_title':'Ближайшие экологические мероприятия',
         'events_subtitle':'Выберите интересную акцию и отправьте заявку на участие.',
         'events_search':'Поиск по акциям...','events_empty':'Акции не найдены.',
@@ -282,17 +282,17 @@ T = {
         'col_joins':'Участий','col_status_user':'Статус',
         'user_active':'Активен','user_banned':'Заблокирован',
         'btn_ban':'Заблокировать','btn_unban':'Разблокировать','btn_reset_acc':'Сбросить историю',
-        'banned_notice':'Ваш аккаунт заблокирован. Подробнее: hello@ecosort.kz',
+        'banned_notice':'Ваш аккаунт заблокирован. Подробнее: hello@ecolife.kz',
         'no_users':'Пользователей нет.',
         'search_users':'Поиск по пользователям...',
         'admin_only_title':'Доступ только для администратора',
-        'admin_only_text':'Войдите как admin@ecosort.kz / admin123.',
+        'admin_only_text':'Войдите как admin@ecolife.kz / admin123.',
         'forgot_eyebrow':'Восстановление доступа','forgot_title':'Сброс пароля',
         'forgot_text':'Введите email вашего аккаунта. Мы отправим ссылку для сброса пароля.',
         'forgot_send':'Отправить ссылку',
         'reset_eyebrow':'Новый пароль','reset_title':'Придумайте новый пароль',
         'reset_new':'Новый пароль','reset_confirm':'Повторите пароль','reset_save':'Сохранить',
-        'footer_about':'EcoSort — платформа для поиска пунктов приёма отходов, участия в акциях и развития экологической культуры.',
+        'footer_about':'EcoLife — платформа для поиска пунктов приёма отходов, участия в акциях и развития экологической культуры.',
         'footer_write':'Написать нам','footer_address':'Наш адрес','footer_hours':'Время работы',
         'search':'Поиск','page_of':'из',
     }
@@ -399,7 +399,7 @@ def init_db():
         if conn.execute("SELECT COUNT(*) FROM users").fetchone()[0] == 0:
             conn.execute(
                 "INSERT INTO users (name,email,city,password_hash,role,created_at) VALUES(?,?,?,?,?,?)",
-                ("Администратор EcoSort","admin@ecosort.kz","Кызылорда",password_hash("admin123"),"admin",now()),
+                ("Администратор EcoLife","admin@ecolife.kz","Кызылорда",password_hash("admin123"),"admin",now()),
             )
         if conn.execute("SELECT COUNT(*) FROM events").fetchone()[0] == 0:
             seeds = [
@@ -477,7 +477,7 @@ def reset_token_delete(token):
 def send_reset_email(email, reset_url):
     if not SMTP_HOST or not SMTP_USER: return False
     msg = MIMEText(f"Сілтеме / Ссылка:\n\n{reset_url}", "plain", "utf-8")
-    msg["Subject"] = "EcoSort — сброс пароля"
+    msg["Subject"] = "EcoLife — сброс пароля"
     msg["From"] = SMTP_USER
     msg["To"] = email
     try:
@@ -540,13 +540,13 @@ def layout(title, active, content, user=None, notice="", lang='kz'):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>{esc(title)} — EcoSort</title>
+  <title>{esc(title)} — EcoLife</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="/static/app.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/"><span class="brand-mark">E</span><span>EcoSort</span></a>
+    <a class="brand" href="/"><span class="brand-mark">E</span><span>EcoLife</span></a>
     <nav class="main-nav" id="mainNav">
       {nav_link("/", t('nav_home',lang), active)}
       {nav_link("/map", t('nav_map',lang), active)}
@@ -567,18 +567,18 @@ def layout(title, active, content, user=None, notice="", lang='kz'):
   <main>{content}</main>
   <footer class="site-footer">
     <div>
-      <strong>EcoSort</strong>
+      <strong>EcoLife</strong>
       <p>{t('footer_about',lang)}</p>
     </div>
     <div>
       <strong>{t('footer_write',lang)}</strong>
-      <p>Email: hello@ecosort.kz</p>
+      <p>Email: hello@ecolife.kz</p>
       <p>+7 700 123 45 67</p>
     </div>
     <div>
       <strong>{t('footer_address',lang)}</strong>
       <p>Қызылорда, Қорқыт Ата, 12</p>
-      <p>Instagram: @ecosort.kz</p>
+      <p>Instagram: @ecolife.kz</p>
     </div>
     <div>
       <strong>{t('footer_hours',lang)}</strong>
@@ -642,7 +642,7 @@ def home_page(user=None, notice="", params=None, lang='kz'):
     <section class="hero">
       <div class="hero-content reveal">
         <p class="eyebrow">{t('hero_eyebrow',lang)}</p>
-        <h1>EcoSort</h1>
+        <h1>EcoLife</h1>
         <p class="hero-slogan">{t('hero_slogan',lang)}</p>
         <p class="hero-text">{t('hero_text',lang)}</p>
         <div class="hero-actions">
@@ -767,7 +767,7 @@ def home_page(user=None, notice="", params=None, lang='kz'):
         <article class="impact-card reveal"><strong>24/7</strong><span>{t('impact4',lang)}</span></article>
       </div>
     </section>"""
-    return layout("EcoSort", "/", content, user, notice, lang)
+    return layout("EcoLife", "/", content, user, notice, lang)
 
 
 def auth_page(kind, user=None, notice="", params=None, lang='kz'):
@@ -784,14 +784,14 @@ def auth_page(kind, user=None, notice="", params=None, lang='kz'):
     <section class="section auth-section">
       <div class="auth-card reveal">
         <p class="eyebrow">{title}</p>
-        <h1>{title} — EcoSort</h1>
+        <h1>{title} — EcoLife</h1>
         <form class="app-form" method="post" action="{action}">
           {extra}
           <label>Email<input type="email" name="email" required></label>
           <label>{t('reset_new',lang) if is_reg else t('login',lang)}<input type="password" name="password" required minlength="4"></label>
           <button class="button button-primary" type="submit">{title}</button>
         </form>
-        <div class="auth-links">{switch}{forgot}<span>Demo: admin@ecosort.kz / admin123</span></div>
+        <div class="auth-links">{switch}{forgot}<span>Demo: admin@ecolife.kz / admin123</span></div>
       </div>
     </section>"""
     return layout(title, f"/{kind}", content, user, notice, lang)
@@ -1603,7 +1603,7 @@ def admin_page(user=None, notice="", params=None, lang='kz'):
 
 # ─── HTTP Handler ─────────────────────────────────────────────────────────────
 
-class EcoSortHandler(BaseHTTPRequestHandler):
+class EcoLifeHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args): return
 
     def get_cookie(self, name):
@@ -1612,10 +1612,10 @@ class EcoSortHandler(BaseHTTPRequestHandler):
         return m.value if m else None
 
     def get_cookie_user(self):
-        return session_get_user(self.get_cookie("ecosort_session"))
+        return session_get_user(self.get_cookie("ecolife_session"))
 
     def get_lang(self):
-        v = self.get_cookie("ecosort_lang")
+        v = self.get_cookie("ecolife_lang")
         return v if v in ('kz','ru') else 'kz'
 
     def send_html(self, body, status=200, headers=None):
@@ -1675,7 +1675,7 @@ class EcoSortHandler(BaseHTTPRequestHandler):
             referer  = self.headers.get("Referer", "/")
             self.send_response(303)
             self.send_header("Location", referer)
-            self.send_header("Set-Cookie", f"ecosort_lang={new_lang}; Path=/; SameSite=Lax")
+            self.send_header("Set-Cookie", f"ecolife_lang={new_lang}; Path=/; SameSite=Lax")
             self.send_header("Content-Length","0")
             self.send_header("Connection","close")
             self.end_headers()
@@ -1694,11 +1694,11 @@ class EcoSortHandler(BaseHTTPRequestHandler):
             self.send_json(dict(user) if user else {"user":None}); return
 
         if path == "/logout":
-            sid = self.get_cookie("ecosort_session")
+            sid = self.get_cookie("ecolife_session")
             if sid: session_delete(sid)
             self.send_response(303)
             self.send_header("Location", f"/?notice={quote('Шықтыңыз / Вы вышли')}")
-            self.send_header("Set-Cookie","ecosort_session=; Path=/; Max-Age=0; SameSite=Lax; HttpOnly")
+            self.send_header("Set-Cookie","ecolife_session=; Path=/; Max-Age=0; SameSite=Lax; HttpOnly")
             self.send_header("Content-Length","0"); self.send_header("Connection","close"); self.end_headers(); return
 
         if path == "/reset-password":
@@ -1755,7 +1755,7 @@ class EcoSortHandler(BaseHTTPRequestHandler):
             sid = session_create(uid)
             self.send_response(303)
             self.send_header("Location",f"/profile?notice={quote('Тіркелді / Регистрация выполнена')}")
-            self.send_header("Set-Cookie",f"ecosort_session={sid}; Path=/; SameSite=Lax; HttpOnly")
+            self.send_header("Set-Cookie",f"ecolife_session={sid}; Path=/; SameSite=Lax; HttpOnly")
             self.send_header("Content-Length","0"); self.send_header("Connection","close"); self.end_headers(); return
 
         # Вход
@@ -1771,7 +1771,7 @@ class EcoSortHandler(BaseHTTPRequestHandler):
             target = "/admin" if found["role"]=="admin" else "/profile"
             self.send_response(303)
             self.send_header("Location",f"{target}?notice={quote('Кірдіңіз / Вход выполнен')}")
-            self.send_header("Set-Cookie",f"ecosort_session={sid}; Path=/; SameSite=Lax; HttpOnly")
+            self.send_header("Set-Cookie",f"ecolife_session={sid}; Path=/; SameSite=Lax; HttpOnly")
             self.send_header("Content-Length","0"); self.send_header("Connection","close"); self.end_headers(); return
 
         # Участие в акции
@@ -1988,8 +1988,8 @@ class EcoSortHandler(BaseHTTPRequestHandler):
 
 def main():
     init_db()
-    server = ThreadingHTTPServer((HOST, PORT), EcoSortHandler)
-    print(f"EcoSort → http://{HOST}:{PORT}")
+    server = ThreadingHTTPServer((HOST, PORT), EcoLifeHandler)
+    print(f"EcoLife → http://{HOST}:{PORT}")
     server.serve_forever()
 
 if __name__ == "__main__":

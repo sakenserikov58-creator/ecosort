@@ -310,7 +310,7 @@ button { cursor: pointer; border: none; background: none; }
   inset: 0;
   background-image:
     linear-gradient(135deg, rgba(0, 30, 27, 0.96) 0%, rgba(0, 46, 42, 0.82) 50%, rgba(0, 30, 27, 0.7) 100%),
-    url("/static/ecosort-hero.png");
+    url("/static/ecolife-hero.png");
   background-size: cover;
   background-position: center;
   will-change: transform;

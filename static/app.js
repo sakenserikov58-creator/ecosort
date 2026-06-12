@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   EcoSort — Animations & Interactivity
+   EcoLife — Animations & Interactivity
    ═══════════════════════════════════════════════ */
 
 // ─── Утилиты ─────────────────────────────────
@@ -34,7 +34,7 @@ const stations = [
    ═══════════════════════════════════════════════ */
 function setupIntroLoader() {
   // Показываем лоадер только если пользователь ещё не видел его в этой сессии
-  if (sessionStorage.getItem("ecosort_loaded")) return;
+  if (sessionStorage.getItem("ecolife_loaded")) return;
 
   const loaderHTML = `
     <div id="intro-loader">
@@ -75,7 +75,7 @@ function setupIntroLoader() {
 
   // Небольшая пауза, потом запускаем
   setTimeout(nextStep, 200);
-  sessionStorage.setItem("ecosort_loaded", "1");
+  sessionStorage.setItem("ecolife_loaded", "1");
 }
 
 /* ═══════════════════════════════════════════════
